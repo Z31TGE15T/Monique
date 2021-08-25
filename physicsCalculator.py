@@ -30,8 +30,8 @@ class physicsCalculator:
         s0 = int(input("Enter intial surface: "))
         t0 = int(input("Enter inital tempertature(°C): "))
         tf = int(input("Enter final temperature(°C): "))
-        deltaS = 2 * a * s0 * (t0 + tf)
-        print("Result: " + str((deltaS)))
+        deltaS = 2 * a * s0 * (tf - t0)
+        print("Result: " + str((deltaS)) + "cm2")
 
     def volumetricDilation():
         print("WARNING: Scientific Notation / Alpha must be in decimal!!!!")
@@ -39,7 +39,7 @@ class physicsCalculator:
         t0 = int(input("Enter inital tempertature(°C): "))
         tf = int(input("Enter final temperature(°C): "))
         v0 = int(input("Enter intial volume: "))
-        deltaV = 3 * a * v0 * (t0 + tf)
+        deltaV = 3 * a * v0 * (tf - t0)
         print("Result: " + str(deltaV) + " cm3")
 
     def linearThermalDilation(): #FIX: WORKING IN PROGRESS, RESULT NOT ACCURATE: Expected 100.036 not 100.035999999999
@@ -54,5 +54,15 @@ class physicsCalculator:
         Tf = float(input("Enter Temperature in Fahrenheit(°F)"))
         Tk = (Tf + 459.67) * 5 / 9
         print(str(Tk) + "K")
+    
+    def kphToMach():
+        kph = float(input("Enter velcocity in Kilometers(Kph): "))
+        mach = kph / 1234.8
+        print(mach)
+    
+    def machToKPH():
+        mach = float(input())
+        kph = mach * 1225.044
+        print(kph)
     
 #Debug Space
