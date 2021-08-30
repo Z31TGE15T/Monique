@@ -89,7 +89,7 @@ class mathCalculator:
         colors = ['m', 'g', 'r', 'b']
 
         # Select length of axes and the space between tick labels
-        xmin, xmax, ymin, ymax = -20, 20, -20, 20
+        xmin, xmax, ymin, ymax = -15, 15, -15, 15
         ticks_frequency = 1
 
         # Plot points

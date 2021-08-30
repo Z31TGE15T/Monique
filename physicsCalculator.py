@@ -18,7 +18,7 @@ class physicsCalculator:
         Tf = float(input("Enter temperature in Fahrenheit(°F): "))
         Tc = (Tf - 32) / 1.8
         print("Result: " + str(round(Tc)) + "°F")
-
+    
     def kelvinToFahren():
         Tk = float(input("Enter temperature in Kelvin(K): "))
         Tf = 1.8 * (Tk - 273) + 32
@@ -42,7 +42,7 @@ class physicsCalculator:
         deltaV = 3 * a * v0 * (tf - t0)
         print("Result: " + str(deltaV) + " cm3")
 
-    def linearThermalDilation(): #FIX: WORKING IN PROGRESS, RESULT NOT ACCURATE: Expected 100.036 not 100.035999999999
+    def linearThermalDilation(): 
         print("WARNING: Scientific Notation / Alpha must be in decimal!!!!")
         alpha = float(input("Enter alpha: "))
         l0 = int(input("Enter inital length: "))
