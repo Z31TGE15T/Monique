@@ -52,9 +52,9 @@ def main():
         elif secondaryChoice == 8:
             print("[8] Volumetric Dilation")
             physicsCalculator.volumetricDilation()
-        else:
-            print("Invalid Input!!!")
-
+        elif secondaryChoice == 9:
+            physicsCalculator.linearThermalDilation()
+            
     elif choice == 4:
         exit()
 
