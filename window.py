@@ -9,4 +9,5 @@ print('[2] Physics')
 print('[3] About')
 print('[4] Exit')
 
-main()
+if __name__ == "__main__":
+    main()

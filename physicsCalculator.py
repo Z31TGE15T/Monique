@@ -12,7 +12,7 @@ class physicsCalculator:
     def celsiusToFahren():
         Tc = float(input("Enter temperature in Celsius(°C): "))
         Tf = Tc * (1.8) + 32
-        print("Result:" + str(round(Tf)) + "°F")
+        print("Result: " + str(round(Tf)) + "°F")
 
     def fahrenToCelsius():
         Tf = float(input("Enter temperature in Fahrenheit(°F): "))
@@ -65,4 +65,3 @@ class physicsCalculator:
         kph = mach * 1225.044
         print(kph)
     
-#Debug Space

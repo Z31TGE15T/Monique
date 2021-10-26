@@ -1,10 +1,11 @@
 from mathCalculator import *
 from physicsCalculator import *
+from options import Options
 
 def main():
     choice = int(input("Choose Operation: "))
-
     if choice == 1:
+        Options.math()
         secondaryChoice = int((input("Choose Math operation: ")))
         if secondaryChoice == 1:
             print("[1] Congrous Arch and Number of Laps")
@@ -26,7 +27,9 @@ def main():
         else:
             print("Invalid Input!!!")
 
+
     elif choice == 2:
+        Options.physics()
         secondaryChoice = int((input("Choose Physics operation: ")))
         if secondaryChoice == 1:
             print("[1] Convert: Celisus to Fahrenheit")
@@ -54,7 +57,7 @@ def main():
             physicsCalculator.volumetricDilation()
         elif secondaryChoice == 9:
             physicsCalculator.linearThermalDilation()
-            
+
     elif choice == 4:
         exit()
 
