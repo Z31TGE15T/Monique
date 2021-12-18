@@ -19,7 +19,7 @@ class physicsCalculator:
     def fahrenToCelsius():
         Tf = float(input("Enter temperature in Fahrenheit(°F): "))
         Tc = (Tf - 32) / 1.8
-        print("Result: " + str(round(Tc)) + "°F")
+        print("Result: " + str(round(Tc)) + "°C")
     
     def kelvinToFahren():
         Tk = int(input("Enter temperature in Kelvin(K): "))
@@ -50,8 +50,9 @@ class physicsCalculator:
     def linearThermalDilation(): 
         l0 = int(input("Enter inital length: "))
         alpha = decimal.Decimal(input("Enter alpha: "))
-        deltaTheta = int(input("Enter temperature(°C): "))
-        deltaL = round(l0 * alpha * deltaTheta, 4)
+        tf = int(input("Enter final temperature(°C):"))
+        t0 = int(input("Enter final temperature(°C): "))
+        deltaL = round(l0 * alpha * (tf - t0), 4)
         print(str(deltaL))
     
     def kphToMach():
