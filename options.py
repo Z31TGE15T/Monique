@@ -9,6 +9,7 @@ class Options:
         print("[6] Convert: Fahrenheit to Kelvin")
         print("[7] Superficial Dilation")
         print("[8] Volumetric Dilation")
+        print("[9] Thermal Linear Dilation")
         print()
     def math():
         print()
