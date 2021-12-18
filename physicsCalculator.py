@@ -22,9 +22,14 @@ class physicsCalculator:
         print("Result: " + str(round(Tc)) + "°F")
     
     def kelvinToFahren():
-        Tk = float(input("Enter temperature in Kelvin(K): "))
+        Tk = int(input("Enter temperature in Kelvin(K): "))
         Tf = 1.8 * (Tk - 273) + 32
         print("Result: " + str(round(Tf)) + "°F")
+
+    def fahrenToKelvin():
+        Tf = int(input("Enter Temperature in Fahrenheit(°F)"))
+        Tk = (Tf + 459.67) * 5 / 9
+        print(str(Tk) + "K")
 
     def superficialDilation(): 
         a = decimal.Decimal(input("Enter alpha: "))
@@ -46,21 +51,16 @@ class physicsCalculator:
         l0 = int(input("Enter inital length: "))
         alpha = decimal.Decimal(input("Enter alpha: "))
         deltaTheta = int(input("Enter temperature(°C): "))
-        L = l0 * alpha * deltaTheta
-        print(str(L))
-    
-    def fahrenToKelvin():
-        Tf = float(input("Enter Temperature in Fahrenheit(°F)"))
-        Tk = (Tf + 459.67) * 5 / 9
-        print(str(Tk) + "K")
+        deltaL = round(l0 * alpha * deltaTheta, 4)
+        print(str(deltaL))
     
     def kphToMach():
-        kph = float(input("Enter velcocity in Kilometers(Kph): "))
+        kph = int(input("Enter velcocity in Kilometers(Kph): "))
         mach = kph / 1234.8
         print(mach)
     
     def machToKPH():
-        mach = float(input())
+        mach = int(input("Enter velcocity in mach(M):"))
         kph = mach * 1225.044
         print(kph)
     
