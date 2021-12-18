@@ -1,3 +1,5 @@
+import decimal
+
 class physicsCalculator:
     def celsiusToKelvin():
         Tc = float(input("Enter temperature in Celsius(°C): "))
@@ -25,26 +27,23 @@ class physicsCalculator:
         print("Result: " + str(round(Tf)) + "°F")
 
     def superficialDilation(): 
-        print("WARNING: Scientific Notation / Alpha must be in decimal!!!!")
-        a = float(input("Enter alpha: "))
+        a = decimal.Decimal(input("Enter alpha: "))
         s0 = int(input("Enter intial surface: "))
         t0 = int(input("Enter inital tempertature(°C): "))
         tf = int(input("Enter final temperature(°C): "))
-        deltaS = 2 * a * s0 * (tf - t0)
+        deltaS = round(a * s0 * (tf - t0), 4)
         print("Result: " + str((deltaS)) + "cm2")
 
     def volumetricDilation():
-        print("WARNING: Scientific Notation / Alpha must be in decimal!!!!")
-        a = float(input("Enter alpha: "))
+        v0 = int(input("Enter intial volume: "))
+        a = decimal.Decimal(input("Enter alpha: "))
         t0 = int(input("Enter inital tempertature(°C): "))
         tf = int(input("Enter final temperature(°C): "))
-        v0 = int(input("Enter intial volume: "))
-        deltaV = 3 * a * v0 * (tf - t0)
+        deltaV = round(a * v0 * (tf - t0), 4)
         print("Result: " + str(deltaV) + " cm3")
 
     def linearThermalDilation(): 
-        print("WARNING: Scientific Notation / Alpha must be in decimal!!!!")
-        alpha = float(input("Enter alpha: "))
+        alpha = decimal.Decimal(input("Enter alpha: "))
         l0 = int(input("Enter inital length: "))
         deltaTheta = int(input("Enter temperature(°C): "))
         L = l0 * (1 + (alpha * deltaTheta))

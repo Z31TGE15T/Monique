@@ -3,7 +3,11 @@ from physicsCalculator import *
 from options import Options
 
 def main():
-    choice = int(input("Choose Operation: "))
+    while True:
+        choice = int(input("Choose Operation: "))
+        if choice < 5:
+            break
+
     if choice == 1:
         Options.math()
         secondaryChoice = int((input("Choose Math operation: ")))
@@ -58,8 +62,5 @@ def main():
         elif secondaryChoice == 9:
             physicsCalculator.linearThermalDilation()
 
-    elif choice == 4:
-        exit()
-
     else:
-        print("Invalid Input!!!")
+        exit()
