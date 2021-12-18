@@ -60,6 +60,7 @@ def main():
             print("[8] Volumetric Dilation")
             physicsCalculator.volumetricDilation()
         elif secondaryChoice == 9:
+            print("[9] Thermal Linear Dilation")
             physicsCalculator.linearThermalDilation()
 
     else:
