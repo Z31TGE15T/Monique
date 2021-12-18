@@ -43,10 +43,10 @@ class physicsCalculator:
         print("Result: " + str(deltaV) + " cm3")
 
     def linearThermalDilation(): 
-        alpha = decimal.Decimal(input("Enter alpha: "))
         l0 = int(input("Enter inital length: "))
+        alpha = decimal.Decimal(input("Enter alpha: "))
         deltaTheta = int(input("Enter temperature(°C): "))
-        L = l0 * (1 + (alpha * deltaTheta))
+        L = l0 * alpha * deltaTheta
         print(str(L))
     
     def fahrenToKelvin():
